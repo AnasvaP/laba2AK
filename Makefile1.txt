@@ -1,0 +1,9 @@
+hello: file1.o calculator.o
+	g++ -o hello file1.o calculator.o
+file1.o: file1.cpp
+	g++ -c file1.cpp
+calculator.o: calculator.cpp
+	g++ -c calculator.cpp
+clean: 
+	rm hello
+	rm *.o
